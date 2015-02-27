@@ -47,7 +47,7 @@
 				if (!$read['error']) {
 					$elements = Array();
 					$return_elements = Array();
-					foreach ($read['data']['herm3tica_data'] as $element) {
+					foreach ($read['data'][$db_tables['data']] as $element) {
 						if (!in_array($element['id'], $elements)) {
     						array_push($elements, $element['id']);
     						array_push($return_elements, $element);
@@ -64,7 +64,7 @@
 				if (!$read['error']) {
 					$elements = Array();
 					$return_elements = Array();
-					foreach ($read['data']['herm3tica_data'] as $element) {
+					foreach ($read['data'][$db_tables['data']] as $element) {
 						if (!in_array($element['id'], $elements)) {
     						array_push($elements, $element['id']);
     						array_push($return_elements, $element);
