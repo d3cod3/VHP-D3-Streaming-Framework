@@ -51,9 +51,15 @@ function return_array($process_id, $data, $ui_msg, $dosql='', $error=FALSE, $typ
 		$return['error_type'] = $type;
 		$return['error_msg'] = $tec_msg;
 		$return['error_process'] = $error_process;
-	} else if ($tec_msg!='') {
+		$return['ok'] = "0";
+	}else if ($tec_msg!='') {
 		$return['tec_msg'] = $tec_msg;
 	}
+
+	if($error == false){
+		$return['ok'] = "1";
+	}
+	
 	return $return;
 }
 
